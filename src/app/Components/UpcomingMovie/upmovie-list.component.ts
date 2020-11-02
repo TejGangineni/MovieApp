@@ -24,7 +24,7 @@ export class UpMovieListComponent implements OnInit {
         });        
     }
 
-    // Get student list success
+    // Get up coming list success
     success(data){
         this.upMovieListData = data;       
     }    

@@ -17,21 +17,6 @@ providedIn: 'root'
       
     }
 
-    // getPopularMovies(total: number = 5, region: string = 'CA'): Observable {
-    //   const url = `${this.apiUrl}&region=${region}`;
-  
-    //   return range(1, total).pipe(
-    //     mergeMap(page => {
-    //       return this.http.get(`${url}&page=${page}`)
-    //         .pipe(
-    //           map(res => res.results),
-    //           retry(3), // retry a failed request up to 3 times
-    //           catchError(this.handleError) // then handle the error
-    //         );
-    //     }),
-    //   );
-    // }
-
    getTopRatedMovies():Observable<Movie> {
     return this.http.get<Movie>(this.apiUrl+ "top_rated" + this.apiKey, this.httpOptions)    
    };
